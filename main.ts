@@ -4,7 +4,7 @@ basic.forever(function () {
     temperature = input.temperature()
     radio.sendValue(control.deviceName(), temperature)
     serial.writeValue(control.deviceName(), temperature)
-    datalogger.log(datalogger.createCV("t", 0))
+    datalogger.log(datalogger.createCV("t", temperature))
     basic.showString("" + (temperature))
     basic.showLeds(`
         # . # # .
